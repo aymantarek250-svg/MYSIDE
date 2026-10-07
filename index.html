@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجري الاحترافي</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: #f8f9fa; color: #333; }
+        
+        /* شريط التنقل العلوي */
+        header { background: #ffffff; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-size: 22px; font-weight: bold; color: #007bff; }
+        nav a { text-decoration: none; color: #555; margin-left: 20px; font-weight: 600; }
+        nav a:hover { color: #007bff; }
+
+        /* القسم الرئيسي */
+        .hero { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #007bff, #0056b3); color: white; }
+        .hero h1 { font-size: 36px; margin-bottom: 10px; }
+        .hero p { font-size: 18px; opacity: 0.9; }
+
+        /* قسم المنتجات */
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .section-title { font-size: 24px; margin-bottom: 20px; border-bottom: 2px solid #007bff; display: inline-block; padding-bottom: 5px; }
+        
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
+        .product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        
+        .product-img { width: 100%; height: 180px; background: #e9ecef; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 14px; }
+        .product-info { padding: 20px; text-align: right; }
+        .product-title { font-size: 18px; margin-bottom: 8px; font-weight: bold; }
+        .product-price { color: #28a745; font-size: 20px; font-weight: bold; margin-bottom: 12px; }
+        
+        .btn { display: block; text-align: center; background: #25D366; color: white; padding: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.2s; }
+        .btn:hover { background: #1ebe5d; }
+    </style>
+</head>
+<body>
+
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="logo">متجري 🛍️</div>
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">المنتجات</a>
+            <a href="https://wa.me/0201100331396">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <!-- الواجهة الترحيبية -->
+    <div class="hero">
+        <h1>أهلاً بك في منصة ايمن التسويقية الخاصة</h1>
+        <p>اكتشف أفضل المنتجات بأعلى جودة وأفضل الأسعار</p>
+    </div>
+
+    <!-- شبكة المنتجات -->
+    <div class="container">
+        <h2 class="section-title">منتجاتنا المميزة</h2>
+        
+        <div class="products-grid">
+            <!-- المنتج الأول -->
+            <div class="product-card">
+                <div class="product-img">صورة المنتج</div>
+                <div class="product-info">
+                    <div class="product-title">منتج احترافي رقم 1</div>
+                    <div class="product-price">٧٥٠ جنيه</div>
+                    <a href="https://wa.me/201100331396" class="btn">اطلب عبر واتساب</a>
+                </div>
+            </div>
+
+            <!-- المنتج الثاني -->
+            <div class="product-card">
+                <div class="product-img">صورة المنتج</div>
+                <div class="product-info">
+                    <div class="product-title">منتج احترافي رقم 2</div>
+                    <div class="product-price">١٢٠٠ جنيه</div>
+                    <a href="https://wa.me/201000000000" class="btn">اطلب عبر واتساب</a>
+                </div>
+            </div>
+
+            <!-- المنتج الثالث -->
+            <div class="product-card">
+                <div class="product-img">صورة المنتج</div>
+                <div class="product-info">
+                    <div class="product-title">منتج احترافي رقم 3</div>
+                    <div class="product-price">٤٥٠ جنيه</div>
+                    <a href="https://wa.me/201000000000" class="btn">اطلب عبر واتساب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
