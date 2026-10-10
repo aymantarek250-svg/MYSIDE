@@ -40,21 +40,86 @@
 <body>
 
     <!-- الشريط العلوي -->
-    <header>
-        <div class="logo">متجري 🛍️</div>
-        <nav>
-            <a href="#">الرئيسية</a>
-            <a href="#">المنتجات</a>
-            <a href="https://wa.me/0201100331396">تواصل معنا</a>
-        </nav>
-    </header>
+  <!-- الهيدر العلوي - اسم المتجر في المنتصف -->
+<header style="background-color: #000000; padding: 20px; border-bottom: 2px solid #ff0033; font-family: sans-serif; position: sticky; top: 0; z-index: 1000;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+        
+        <!-- زرار المفضلات على الشمال -->
+        <button onclick="toggleWishlistModal()" style="background: transparent; border: 1px solid #ff0033; color: #fff; padding: 8px 14px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 14px;">
+            ❤️ المفضلة (<span id="wishlist-count">0</span>)
+        </button>
 
-    <!-- الواجهة الترحيبية -->
-    <div class="hero">
-        <h1>أهلاً بك في منصة ايمن التسويقية الخاصة</h1>
-        <p>اكتشف أفضل المنتجات بأعلى جودة وأفضل الأسعار</p>
+        <!-- اسم المتجر في المنتصف -->
+        <h1 style="color: #ff0033; font-size: 32px; font-weight: 900; margin: 0; letter-spacing: 2px; text-align: center;">
+            7AMZA STORE
+        </h1>
+
+        <!-- زرار السلة على اليسارن -->
+        <button onclick="toggleCartModal()" style="background: #ff0033; border: none; color: #fff; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 14px;">
+            🛒 السلة (<span id="cart-count">0</span>)
+        </button>
     </div>
+</header>
 
+<!-- قسم الترحيب تحت الهيدر بخلفية سوداء وكلام واضح -->
+<section style="background-color: #111111; padding: 30px 20px; text-align: center; border-bottom: 1px solid #333;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <p style="color: #ffffff; font-size: 18px; margin: 0 0 15px 0; font-weight: 400;">
+            أقوى تشكيلة استريت وير وملابس شبابية بأعلى جودة وأفضل الأسعار 🔥
+        </p>
+        <a href="#products" style="display: inline-block; background-color: #ff0033; color: #ffffff; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; box-shadow: 0 4px 15px rgba(255, 0, 51, 0.4);">
+            تسوق الأحدث الآن ⚡
+        </a>
+    </div>
+</section>
+    </div>
+</header>
+        
+        <!-- العنون الفرعي أو الشعار -->
+        <p style="color: #ffffff; font-size: 18px; margin: 0 0 20px 0; font-weight: 300; opacity: 0.9;">
+            أقوى تشكيلة استريت وير وملابس شبابية بأعلى جودة وأفضل سعر 🔥
+        </p>
+        
+        <!-- زرار سريع للتصفح أو التواصل -->
+        <a href="#products" style="display: inline-block; background-color: #ff0033; color: #ffffff; padding: 12px 28px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 15px; transition: 0.3s; box-shadow: 0 4px 15px rgba(255, 0, 51, 0.4);">
+            تسوق الأحدث الآن ⚡
+        </a>
+    </div>
+</header>
+<!-- قسم مميزات المتجر والثقة -->
+<section style="background-color: #ffffff; padding: 25px 15px; border-bottom: 1px solid #eee; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; text-align: center;">
+        
+        <!-- ميزة 1 -->
+        <div style="flex: 1; min-width: 200px; padding: 10px;">
+            <div style="font-size: 30px; margin-bottom: 8px;">🚚</div>
+            <h4 style="margin: 0 0 5px 0; color: #222; font-size: 16px;">شحن سريع وموثوق</h4>
+            <p style="margin: 0; color: #777; font-size: 13px;">توصيل لباب البيت في أسرع وقت</p>
+        </div>
+
+        <!-- ميزة 2 -->
+        <div style="flex: 1; min-width: 200px; padding: 10px;">
+            <div style="font-size: 30px; margin-bottom: 8px;">💵</div>
+            <h4 style="margin: 0 0 5px 0; color: #222; font-size: 16px;">الدفع عند الاستلام</h4>
+            <p style="margin: 0; color: #777; font-size: 13px;">لا تدفع أي شيء إلا بعد معاينة المنتج</p>
+        </div>
+
+        <!-- ميزة 3 -->
+        <div style="flex: 1; min-width: 200px; padding: 10px;">
+            <div style="font-size: 30px; margin-bottom: 8px;">🛡️</div>
+            <h4 style="margin: 0 0 5px 0; color: #222; font-size: 16px;">ضمان استبدال</h4>
+            <p style="margin: 0; color: #777; font-size: 13px;">إمكانية الاسترجاع والاستبدال بسهولة</p>
+        </div>
+
+        <!-- ميزة 4 -->
+        <div style="flex: 1; min-width: 200px; padding: 10px;">
+            <div style="font-size: 30px; margin-bottom: 8px;">⚡</div>
+            <h4 style="margin: 0 0 5px 0; color: #222; font-size: 16px;">دعم وتواصل مباشر</h4>
+            <p style="margin: 0; color: #777; font-size: 13px;">متردد؟ تواصل معنا فوراً عبر الواتساب</p>
+        </div>
+
+    </div>
+</section>
     <!-- شبكة المنتجات -->
     <div class="container">
         <h2 class="section-title">منتجاتنا المميزة</h2>
@@ -91,6 +156,117 @@
             </div>
         </div>
     </div>
+<!-- الشريط المتحرك المستمر الاحترافي -->
+<div style="background-color: #ffffff; width: 100%; padding: 10px 0; overflow: hidden; position: fixed; bottom: 0; left: 0; z-index: 999; white-space: nowrap; border-top: 2px solid #ff0033; box-shadow: 0 -4px 10px rgba(0,0,0,0.1);">
+    <div style="display: inline-block; animation: marquee 12s linear infinite; white-space: nowrap;">
+        <span style="color: #ff0033; font-weight: bold; font-size: 18px; letter-spacing: 2px; margin-left: 40px;">🔥 7AMZA STORE ⚡</span>
+        <span style="color: #ff0033; font-weight: bold; font-size: 18px; letter-spacing: 2px; margin-left: 40px;">🔥 7AMZA STORE ⚡</span>
+        <span style="color: #ff0033; font-weight: bold; font-size: 18px; letter-spacing: 2px; margin-left: 40px;">🔥 7AMZA STORE ⚡</span>
+        <span style="color: #ff0033; font-weight: bold; font-size: 18px; letter-spacing: 2px; margin-left: 40px;">🔥 7AMZA STORE ⚡</span>
+        <span style="color: #ff0033; font-weight: bold; font-size: 18px; letter-spacing: 2px; margin-left: 40px;">🔥 7AMZA STORE ⚡</span>
+        <span style="color: #ff0033; font-weight: bold; font-size: 18px; letter-spacing: 2px; margin-left: 40px;">🔥 7AMZA STORE ⚡</span>
+        <span style="color: #ff0033; font-weight: bold; font-size: 18px; letter-spacing: 2px; margin-left: 40px;">🔥 7AMZA STORE ⚡</span>
+        <span style="color: #ff0033; font-weight: bold; font-size: 18px; letter-spacing: 2px; margin-left: 40px;">🔥 7AMZA STORE ⚡</span>
+    </div>
+</div>
 
+<style>
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+</style>
+<a href="https://wa.me/201100331396?text=مرحباً، أريج الاستفسار عن منتجات 7AMZA STORE" target="_blank" style="position: fixed; bottom: 60px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 55px; height: 55px; text-align: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s;">
+    <i class="fab fa-whatsapp"></i> واتساب
+</a>
+<!-- قسم المنتجات الجديدة -->
+<section style="padding: 40px 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; text-align: center;">
+    <h2 style="color: #111; font-size: 28px; font-weight: 800; margin-bottom: 30px;">
+        🔥 أحدث تشكيلة ملابس 7AMZA STORE ⚡
+        <span style="display: block; width: 80px; height: 4px; background-color: #ff0033; margin: 8px auto 0 auto; border-radius: 2px;"></span>
+    </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto;">
+
+        <!-- منتج 1: تيشيرت صاعقة برق -->
+        <div style="background: white; border-radius: 12px; border: 1px solid #e1e1e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <img src="WhatsApp Image 2026-10-10 at 11.25.23.jpeg" alt="تيشيرت Lightning Black" style="width: 100%; height: 250px; object-fit: cover;">[cite: 2]
+            <div style="padding: 15px; text-align: right;">
+                <h3 style="font-size: 16px; color: #222; margin: 0 0 8px 0;">تيشيرت اوفر سايز - Lightning Black</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <span style="color: #ff0033; font-weight: bold; font-size: 18px;">350 ج.م</span>
+                    <span style="color: #999; text-decoration: line-through; font-size: 13px;">500 ج.م</span>
+                </div>
+                <a href="https://wa.me/201000000000?text=مرحباً، أريج طلب تيشيرت Lightning Black" target="_blank" style="display: block; background: #25d366; color: white; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold;">اطلب عبر واتساب</a>
+            </div>
+        </div>
+
+        <!-- منتج 2: تيشيرت الديناصور -->
+        <div style="background: white; border-radius: 12px; border: 1px solid #e1e1e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <img src="WhatsApp Image 2026-10-10 at 11.25.24.jpeg" alt="تيشيرت T-Rex 3D" style="width: 100%; height: 250px; object-fit: cover;">[cite: 4]
+            <div style="padding: 15px; text-align: right;">
+                <h3 style="font-size: 16px; color: #222; margin: 0 0 8px 0;">تيشيرت مطبوع - T-Rex 3D</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <span style="color: #ff0033; font-weight: bold; font-size: 18px;">320 ج.م</span>
+                    <span style="color: #999; text-decoration: line-through; font-size: 13px;">450 ج.م</span>
+                </div>
+                <a href="https://wa.me/201000000000?text=مرحباً، أريج طلب تيشيرت T-Rex 3D" target="_blank" style="display: block; background: #25d366; color: white; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold;">اطلب عبر واتساب</a>
+            </div>
+        </div>
+
+        <!-- منتج 3: تيشيرت الدب الروبوت -->
+        <div style="background: white; border-radius: 12px; border: 1px solid #e1e1e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <img src="WhatsApp Image 2026-10-10 at 11.25.25.jpeg" alt="تيشيرت Robotic Bear" style="width: 100%; height: 250px; object-fit: cover;">[cite: 9]
+            <div style="padding: 15px; text-align: right;">
+                <h3 style="font-size: 16px; color: #222; margin: 0 0 8px 0;">تيشيرت اسود - Robotic Bear</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <span style="color: #ff0033; font-weight: bold; font-size: 18px;">290 ج.م</span>
+                    <span style="color: #999; text-decoration: line-through; font-size: 13px;">400 ج.م</span>
+                </div>
+                <a href="https://wa.me/201000000000?text=مرحباً، أريج طلب تيشيرت Robotic Bear" target="_blank" style="display: block; background: #25d366; color: white; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold;">اطلب عبر واتساب</a>
+            </div>
+        </div>
+
+        <!-- منتج 4: تيشيرت رمادي Love Bear -->
+        <div style="background: white; border-radius: 12px; border: 1px solid #e1e1e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <img src="WhatsApp Image 2026-10-10 at 11.25.25 (1).jpeg" alt="تيشيرت Grey Love Bear" style="width: 100%; height: 250px; object-fit: cover;">[cite: 5]
+            <div style="padding: 15px; text-align: right;">
+                <h3 style="font-size: 16px; color: #222; margin: 0 0 8px 0;">تيشيرت رمادي - Cool Bear</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <span style="color: #ff0033; font-weight: bold; font-size: 18px;">280 ج.م</span>
+                    <span style="color: #999; text-decoration: line-through; font-size: 13px;">380 ج.م</span>
+                </div>
+                <a href="https://wa.me/201000000000?text=مرحباً، أريج طلب تيشيرت Cool Bear" target="_blank" style="display: block; background: #25d366; color: white; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold;">اطلب عبر واتساب</a>
+            </div>
+        </div>
+
+        <!-- منتج 5: تيشيرت بيج Ted -->
+        <div style="background: white; border-radius: 12px; border: 1px solid #e1e1e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <img src="WhatsApp Image 2026-10-10 at 11.25.25 (2).jpeg" alt="تيشيرت Beige Teddy" style="width: 100%; height: 250px; object-fit: cover;">[cite: 6]
+            <div style="padding: 15px; text-align: right;">
+                <h3 style="font-size: 16px; color: #222; margin: 0 0 8px 0;">تيشيرت بيج - Teddy Glasses</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <span style="color: #ff0033; font-weight: bold; font-size: 18px;">310 ج.م</span>
+                    <span style="color: #999; text-decoration: line-through; font-size: 13px;">420 ج.م</span>
+                </div>
+                <a href="https://wa.me/201000000000?text=مرحباً، أريج طلب تيشيرت Teddy Glasses" target="_blank" style="display: block; background: #25d366; color: white; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold;">اطلب عبر واتساب</a>
+            </div>
+        </div>
+
+        <!-- منتج 6: بنطلون كارجو أسود -->
+        <div style="background: white; border-radius: 12px; border: 1px solid #e1e1e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <img src="WhatsApp Image 2026-10-10 at 11.25.25 (4).jpeg" alt="بنطلون Cargo Black" style="width: 100%; height: 250px; object-fit: cover;">[cite: 8]
+            <div style="padding: 15px; text-align: right;">
+                <h3 style="font-size: 16px; color: #222; margin: 0 0 8px 0;">بنطلون جينز كارجو - Black Streetwear</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <span style="color: #ff0033; font-weight: bold; font-size: 18px;">450 ج.م</span>
+                    <span style="color: #999; text-decoration: line-through; font-size: 13px;">600 ج.م</span>
+                </div>
+                <a href="https://wa.me/201000000000?text=مرحباً، أريج طلب بنطلون Cargo Black" target="_blank" style="display: block; background: #25d366; color: white; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold;">اطلب عبر واتساب</a>
+            </div>
+        </div>
+
+    </div>
+</section>
 </body>
 </html>
